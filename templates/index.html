@@ -1,6 +1,50 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>Hello from index.html</h1>
-    <p>{{ request}}</p>
+    <h1>Stock Screener</h1>
+
+    <div class="ui input">
+      <input type="text" placeholder="P/E Ratio">
+    </div>
+    <div class="ui input">
+      <input type="text" placeholder="Dividend Yield">
+    </div>
+
+    <div class="ui checkbox">
+      <input type="checkbox" name="above-50">
+      <label>Above 50 Day MA</label>
+    </div>
+    <div class="ui checkbox">
+      <input type="checkbox" name="above-200">
+      <label>Above 200 Day MA</label>
+    </div>
+
+    <button class="ui button primary">Filter</button>
+
+    <table class="ui celled table">
+        <thead>
+        <tr>
+            <th>Symbol</th>
+            <th>P/E</th>
+            <th>Dividend Yield</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td data-label="Symbol">MSFT</td>
+            <td data-label="P/E">10</td>
+            <td data-label="Dividend Yield">2</td>
+        </tr>
+        <tr>
+            <td data-label="Symbol">AAPL</td>
+            <td data-label="P/E">44</td>
+            <td data-label="Dividend Yield">3</td>
+        </tr>
+        <tr>
+            <td data-label="Symbol">FB</td>
+            <td data-label="P/E">20</td>
+            <td data-label="Dividend Yield">0</td>
+        </tr>
+        </tbody>
+    </table>
 {% endblock %}
