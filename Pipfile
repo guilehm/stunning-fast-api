@@ -8,6 +8,9 @@ verify_ssl = true
 [packages]
 fastapi = "*"
 uvicorn = "*"
+jinja2 = "*"
+yfinance = "*"
+sqlalchemy = "*"
 
 [requires]
 python_version = "3.7"
